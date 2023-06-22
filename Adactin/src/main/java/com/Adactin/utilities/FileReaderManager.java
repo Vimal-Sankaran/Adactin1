@@ -9,7 +9,7 @@ public class FileReaderManager {
     Properties property = new Properties();
 
     public String getPropertyValue(String key) throws IOException {
-        String propertyFilePath = "E:/Selenium/Adactin/Adactin.properties";
+        String propertyFilePath = "C:\\Selenium\\Project\\Adactin1\\Adactin\\Adactin.properties";
         FileInputStream fis = new FileInputStream(propertyFilePath);
         property.load(fis);
 
