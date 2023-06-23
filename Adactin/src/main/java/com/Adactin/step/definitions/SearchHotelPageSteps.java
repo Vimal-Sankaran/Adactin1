@@ -98,7 +98,7 @@ public class SearchHotelPageSteps extends BaseClass {
      * Inputs Booking Details for a Customer
      * @param id : User Id of a Customer
      */
-    @Given("i enter booking details for {string}")
+    @Given("i enter booking details for customer{string}")
         public void enterSearchHotelPageDetails(String id) {
         searchHotelPage.setLocation(entityHelper.getCustomerDataById(id).getLocation());
         searchHotelPage.setHotels(entityHelper.getCustomerDataById(id).getHotels());
