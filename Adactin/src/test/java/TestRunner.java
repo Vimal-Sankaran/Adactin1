@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
         features = "classpath:/Features",
         glue = "com.Adactin.step.definitions",
-        tags = ""
+        tags = "@Login02"
 
 )
 public class TestRunner {

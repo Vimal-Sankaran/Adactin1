@@ -1,6 +1,8 @@
 [
 {
   "id": "Customer01",
+  "username": "Bankingteam",
+  "password": "bankingteam@123",
   "location": "London",
   "hotels": "Hotel Sunshine",
   "roomType": "Double",

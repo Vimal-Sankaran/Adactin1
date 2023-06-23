@@ -67,14 +67,8 @@ public class BaseClass {
      * Robot class enter tab and backspace
      */
     public static WebDriver driver;
-
-    public static FileReaderManager frm =new FileReaderManager();
-    public static WebDriver setChromeBrowser() throws IOException {
-        try {
-            System.setProperty("webdriver.chrome.driver",frm.getPropertyValue("driverpath"));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+    public static WebDriver setChromeBrowser() {
+        System.setProperty("webdriver.chrome.driver","C:\\Drivers\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         return driver;
