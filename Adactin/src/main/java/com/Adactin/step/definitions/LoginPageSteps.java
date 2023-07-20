@@ -19,9 +19,11 @@ import java.io.IOException;
 public class LoginPageSteps extends BaseClass {
 
     public static WebDriver driver = setChromeBrowser();
-    public static FileReaderManager fileReaderManager = new FileReaderManager();
-    public static LoginPage loginPage = new LoginPage(driver);
-    public static EntityHelper entityHelper = new EntityHelper();
+    FileReaderManager fileReaderManager = new FileReaderManager();
+    LoginPage loginPage = new LoginPage(driver);
+    EntityHelper entityHelper = new EntityHelper();
+
+    public LoginPageSteps() {}
 
     /**
      * Navigates to adactin login page

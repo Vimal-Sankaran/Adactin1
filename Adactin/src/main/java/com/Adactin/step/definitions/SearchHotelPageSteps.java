@@ -5,103 +5,99 @@ import com.Adactin.utilities.BaseClass;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
-import java.io.IOException;
 
 /**
- * This Step class contains methods for Search Hotel functionality
+ * This Step class contains methods for search hotel functionality
  * Developed by : Jaya
  * Dependent Test : N/A
  */
 public class SearchHotelPageSteps extends BaseClass {
 
-    public WebDriver driver=setChromeBrowser();
-    SearchHotelPage searchHotelPage =new SearchHotelPage(driver);
-    EntityHelper entityHelper =new EntityHelper();
+    SearchHotelPage searchHotelPage = new SearchHotelPage(driver);
+    EntityHelper entityHelper = new EntityHelper();
 
-    public SearchHotelPageSteps() throws IOException {
-    }
+    public SearchHotelPageSteps() {}
 
     /**
-     * Selects Location from Dropdown
-     * @param location : Location of a Hotel
+     * Selects location from dropdown
+     * @param location : Location of a hotel
      */
-    @Given ("i enter location {string} in Adactin Search Hotel Page")
+    @Given ("i select location {string} in adactin search hotel page")
     public void selectLocation(String location) {
         searchHotelPage.setLocation(location);
     }
 
     /**
-     * Selects Hotels from Dropdown
-     * @param hotels : Hotel Name
+     * Selects hotel from Dropdown
+     * @param hotels : Hotel name
      */
-    @Given ("i enter hotels {string} in Adactin Search Hotel Page")
-    public void selectHotels(String hotels) {
-        searchHotelPage.setHotels(hotels);
+    @Given ("i select hotel {string} in adactin search hotel page")
+    public void selectHotel(String hotels) {
+        searchHotelPage.setHotel(hotels);
     }
 
     /**
-     * Selects Room Type from Dropdown
-     * @param roomType : Room Type
+     * Selects room type from dropdown
+     * @param roomType : Room type
      */
-    @Given ("i enter roomType {string} in Adactin Search Hotel Page")
+    @Given ("i select room type {string} in adactin search hotel page")
     public void selectRoomType(String roomType) {
         searchHotelPage.setRoomType(roomType);
     }
 
     /**
-     * Selects Number of rooms from Dropdown
-     * @param numberOfRooms : Number of Rooms
+     * Selects number of rooms from dropdown
+     * @param numberOfRooms : Number of rooms
      */
-    @Given ("i enter numberOfRooms {string} in Adactin Search Hotel Page")
+    @Given ("i select number of rooms {string} in adactin search hotel page")
     public void selectNumberOfRooms(String numberOfRooms) {
         searchHotelPage.setNumberOfRooms(numberOfRooms);
     }
 
     /**
-     * Inputs Check In Date in Search Hotel Page
-     * @param checkInDate : Check In Date
+     * Inputs check in date in search hotel page
+     * @param checkInDate : Check in date
      */
-    @Given ("i enter checkInDate {string} in Adactin Search Hotel Page")
+    @Given ("i enter check in date {string} in adactin search hotel page")
     public void selectCheckInDate(String checkInDate) {
         searchHotelPage.setCheckInDate(checkInDate);
     }
 
     /**
-     * Inputs Check Out Date in Search Hotel Page
-     * @param checkOutDate :Check Out Date
+     * Inputs check out date in search hotel page
+     * @param checkOutDate :Check out date
      */
-    @Given ("i enter checkOutDate {string} in Adactin Search Hotel Page")
+    @Given ("i enter check out date {string} in adactin search hotel page")
     public void selectCheckOutDate(String checkOutDate) {
         searchHotelPage.setCheckOutDate(checkOutDate);
     }
 
     /**
-     * Selects Adults Count from dropdown
-     * @param adultsCount : Adults Count
+     * Selects adults count from dropdown
+     * @param adultsCount : Adults count
      */
-    @Given ("i enter adultsPerRoom {string} in Adactin Search Hotel Page")
+    @Given ("i select adults per room {string} in adactin search hotel page")
     public void selectAdultsPerRoom(String adultsCount) {
         searchHotelPage.setAdultsPerRoom(adultsCount);
     }
 
     /**
-     * Selects Children Count from Dropdown
-     * @param childrenCount : Children Count
+     * Selects children count from dropdown
+     * @param childrenCount : Children count
      */
-    @Given ("i enter childrenPerRoom {string} in Adactin Search Hotel Page")
+    @Given ("i select children per room {string} in adactin search hotel page")
     public void selectChildrenPerRoom(String childrenCount) {
         searchHotelPage.setChildrenPerRoom(childrenCount);
     }
 
     /**
-     * Inputs Booking Details for a Customer
-     * @param id : User Id of a Customer
+     * Inputs booking details for a customer
+     * @param id : User id of a customer
      */
-    @Given("i enter booking details for customer{string}")
+    @Given("i enter booking details for {string}")
         public void enterSearchHotelPageDetails(String id) {
         searchHotelPage.setLocation(entityHelper.getCustomerDataById(id).getLocation());
-        searchHotelPage.setHotels(entityHelper.getCustomerDataById(id).getHotels());
+        searchHotelPage.setHotel(entityHelper.getCustomerDataById(id).getHotel());
         searchHotelPage.setRoomType(entityHelper.getCustomerDataById(id).getRoomType());
         searchHotelPage.setNumberOfRooms(entityHelper.getCustomerDataById(id).getNumberOfRooms());
         searchHotelPage.setCheckInDate(entityHelper.getCustomerDataById(id).getCheckInDate());
@@ -111,17 +107,17 @@ public class SearchHotelPageSteps extends BaseClass {
     }
 
     /**
-     * Clicks on Search Button in Search Hotel Page
+     * Clicks on search button in search hotel page
      */
-    @Given("i click on search button in SearchHotel Page")
+    @Given("i click on search button in search hotel page")
     public void clickSearchButton() {
         searchHotelPage.clickSearch();
     }
 
     /**
-     * Validates the landing of Select Hotel page
+     * Validates the landing of select hotel page
      */
-    @Then("i validate navigation to Select Hotel page")
+    @Then("i validate navigation to select hotel page")
     public void validateSearch() {
         Assert.assertTrue(getCurrentURl().contains("SelectHotel"));
     }

@@ -6,7 +6,6 @@ import com.Adactin.utilities.BaseClass;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import java.io.IOException;
 
 /**
  * This step class contains methods for select hotel functionality
@@ -18,8 +17,7 @@ public class SelectHotelPageSteps extends BaseClass {
     SelectHotelPage selectHotelPage = new SelectHotelPage(driver);
     EntityHelper entityHelper = new EntityHelper();
 
-    public SelectHotelPageSteps() throws IOException {
-    }
+    public SelectHotelPageSteps() {}
 
     /**
      * Selects hotel in select hotel page
@@ -35,7 +33,7 @@ public class SelectHotelPageSteps extends BaseClass {
      */
     @Given("i validate hotel details are displayed for {string}")
     public void validateHotelDetails(String id) {
-        assertTrue(selectHotelPage.getHotelNameField(), entityHelper.getCustomerDataById(id).getHotels(), "Hotel Matched");
+        assertTrue(selectHotelPage.getHotelNameField(), entityHelper.getCustomerDataById(id).getHotel(), "Hotel Matched");
         assertTrue(selectHotelPage.getLocationField(), entityHelper.getCustomerDataById(id).getLocation(), "Location Matched");
         assertTrue(selectHotelPage.getRoomsField().substring(0,0), entityHelper.getCustomerDataById(id).getNumberOfRooms().substring(0,0), "Room count Matched");
         assertTrue(selectHotelPage.getArrivalDateField(), entityHelper.getCustomerDataById(id).getCheckInDate(), "Arrival date Matched");
@@ -52,7 +50,7 @@ public class SelectHotelPageSteps extends BaseClass {
      */
     @Given("i validate hotel name is displayed for {string} in select hotel page")
     public void validateHotelName(String id) {
-        assertTrue(selectHotelPage.getHotelNameField(), entityHelper.getCustomerDataById(id).getHotels(), "Hotel name Matched");
+        assertTrue(selectHotelPage.getHotelNameField(), entityHelper.getCustomerDataById(id).getHotel(), "Hotel name Matched");
     }
 
     /**
