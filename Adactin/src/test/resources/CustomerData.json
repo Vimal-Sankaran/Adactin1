@@ -1,16 +1,15 @@
 [
 {
   "id": "Customer01",
-  "username": "Bankingteam",
-  "password": "bankingteam@123",
+  "username": "BankingTeam123",
+  "password": "BankingTeam@123",
   "location": "London",
-  "hotels": "Hotel Sunshine",
+  "hotel": "Hotel Sunshine",
   "roomType": "Double",
-  "numberOfRooms": "3-Three",
-  "checkInDate": "22/06/2023",
-  "checkOutDate": "27/06/2023",
-  "adultsPerRoom": "2-Two",
-  "childrenPerRoom": "2-Two"
-
+  "numberOfRooms": "3 - Three",
+  "checkInDate": "22/08/2023",
+  "checkOutDate": "27/08/2023",
+  "adultsPerRoom": "2 - Two",
+  "childrenPerRoom": "2 - Two"
 }
 ]

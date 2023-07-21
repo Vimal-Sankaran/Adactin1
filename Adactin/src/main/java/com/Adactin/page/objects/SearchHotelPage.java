@@ -62,10 +62,10 @@ public class SearchHotelPage extends BaseClass {
 
     /**
      * Selects Hotels from dropdown in Adactin Search Hotel Page
-     * @param hotels : Hotel Name
+     * @param hotel : Hotel Name
      */
-    public void setHotels(String hotels) {
-        selectDropDownByText(hotelsDropdown,hotels);
+    public void setHotel(String hotel) {
+        selectDropDownByText(hotelsDropdown,hotel);
     }
 
     /**

@@ -16,8 +16,8 @@ public class CustomerData {
     @JsonProperty("location")
     private String location;
 
-    @JsonProperty("hotels")
-    private String hotels;
+    @JsonProperty("hotel")
+    private String hotel;
     @JsonProperty("roomType")
     private String roomType;
 
@@ -45,12 +45,12 @@ public class CustomerData {
         this.location = location;
     }
 
-    public String getHotels() {
-        return hotels;
+    public String getHotel() {
+        return hotel;
     }
 
-    public void setHotels(String hotels) {
-        this.hotels = hotels;
+    public void setHotel(String hotel) {
+        this.hotel = hotel;
     }
 
     public String getRoomType() {
