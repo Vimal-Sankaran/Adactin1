@@ -101,9 +101,7 @@ public class SelectHotelPage extends BaseClass {
         return getTextBoxValue(departureDateField);
     }
 
-    public String getNumberOfDaysField() {
-        return getTextBoxValue(numberOfDaysField);
-    }
+    public String getNumberOfDaysField() { return getTextBoxValue(numberOfDaysField); }
 
     public String getRoomTypeField() {
         return getTextBoxValue(roomTypeField);

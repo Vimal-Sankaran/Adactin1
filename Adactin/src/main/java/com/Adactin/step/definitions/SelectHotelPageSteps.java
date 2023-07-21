@@ -39,9 +39,9 @@ public class SelectHotelPageSteps extends BaseClass {
         assertTrue(selectHotelPage.getArrivalDateField(), entityHelper.getCustomerDataById(id).getCheckInDate(), "Arrival date Matched");
         assertTrue(selectHotelPage.getDepartureDateField(), entityHelper.getCustomerDataById(id).getCheckOutDate(), "Departure date Matched");
         assertTrue(selectHotelPage.getRoomTypeField(), entityHelper.getCustomerDataById(id).getRoomType(), "Room type Matched");
-        selectHotelPage.setPricePerNight(selectHotelPage.getPricePerNight());
-        selectHotelPage.setTotalPrice(selectHotelPage.getTotalPrice());
-        selectHotelPage.setNumberOfDays(selectHotelPage.getNumberOfDays());
+        selectHotelPage.setPricePerNight(selectHotelPage.getPricePerNightField());
+        selectHotelPage.setTotalPrice(selectHotelPage.getTotalPriceField());
+        selectHotelPage.setNumberOfDays(selectHotelPage.getNumberOfDaysField());
     }
 
     /**

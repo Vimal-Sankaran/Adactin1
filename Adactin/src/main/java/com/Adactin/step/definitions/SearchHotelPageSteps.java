@@ -13,7 +13,7 @@ import org.junit.Assert;
  */
 public class SearchHotelPageSteps extends BaseClass {
 
-    SearchHotelPage searchHotelPage = new SearchHotelPage(driver);
+    private final SearchHotelPage searchHotelPage = new SearchHotelPage(driver);
     EntityHelper entityHelper = new EntityHelper();
 
     public SearchHotelPageSteps() {}
